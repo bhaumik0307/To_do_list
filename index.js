@@ -13,7 +13,7 @@ var date = "";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(getDate);
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://cbhaumik08:bhaumik123@cluster0.oslpoyu.mongodb.net/Cluster", { useNewUrlParser: true });
 
 function getDate(req, res, next) {
     // Create a new Date object
