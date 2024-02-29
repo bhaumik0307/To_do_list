@@ -35,10 +35,12 @@
         <%if(locals.publicElement){%>
             <%locals.publicElement.forEach((ele, index)=>{%>
                 <div class="element">
+                    <form action="/delete" method="post">
                     <input data-text-target="strikethrough-text<%= index %>" class="strikeCheckbox"
-                        type="checkbox">
+                        type="checkbox" name="check" value="<%= ele._id %>" onChange="this.form.submit()">
+                        </form>
                     <p class="strikethrough-text<%= index %>">
-                        <%= ele %>
+                        <%= ele.name %>
                     </p>
                 </div>
                 <%})%>
